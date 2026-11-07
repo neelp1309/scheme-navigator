@@ -1,0 +1,1380 @@
+[
+  {
+    "scheme_id": "pm_kisan",
+    "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "level": "central",
+    "state": null,
+    "category": "agriculture",
+    "ministry_or_department": "Ministry of Agriculture & Farmers Welfare",
+    "description": "Central sector income-support scheme that pays land-holding farmer families a fixed amount every year through Direct Benefit Transfer.",
+    "benefits": "₹6,000 per year per farmer family, paid in three instalments of ₹2,000 directly into the bank account.",
+    "eligibility_text": "All land-holding farmer families with cultivable land recorded in their names are eligible, subject to the exclusion criteria. There is no upper limit on land size. e-KYC is mandatory.",
+    "exclusions_text": "Excluded: institutional landholders; families where any member holds or held a constitutional post; serving or retired central/state government employees and PSU officers (Multi-Tasking Staff / Class IV / Group D are not excluded); retired pensioners with monthly pension of ₹10,000 or more (except MTS/Class IV/Group D); anyone who paid income tax in the last assessment year; registered professionals such as doctors, engineers, lawyers, chartered accountants and architects; current or former MPs, MLAs, ministers, mayors and district panchayat chairpersons.",
+    "criteria": {
+      "occupations": ["farmer"],
+      "requires_land_owner": true,
+      "excludes_income_tax_payer": true,
+      "excludes_govt_employee": true
+    },
+    "fuzzy_conditions": [
+      "Land is not institutional land",
+      "No family member holds or held a constitutional post or elected office (MP/MLA/minister/mayor)",
+      "Not a practising professional (doctor, engineer, lawyer, CA, architect)",
+      "Not a retired pensioner drawing ₹10,000+ per month (Group D/MTS excepted)"
+    ],
+    "documents_required": ["Aadhaar card", "Land ownership records (e.g. 7/12 extract in Gujarat)", "Bank account details linked to Aadhaar", "Mobile number", "Category certificate (SC/ST) if applicable"],
+    "application_steps": [
+      "Visit pmkisan.gov.in and choose 'New Farmer Registration', or go to a Common Service Centre (CSC) or the village Talati/patwari.",
+      "Enter Aadhaar number, state and land details.",
+      "Complete e-KYC (OTP, biometric at CSC, or face authentication).",
+      "State government verifies land records; check status with 'Know Your Status'."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://pmkisan.gov.in/Documents/RevisedPM-KISANOperationalGuidelines(English).pdf",
+      "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/nov/doc2021112361.pdf",
+      "https://www.myscheme.gov.in/schemes/pm-kisan"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "The original 2-hectare cap was removed in 2019; any land size qualifies."
+  },
+  {
+    "scheme_id": "pm_kmy",
+    "name": "Pradhan Mantri Kisan Maan-Dhan Yojana (PM-KMY)",
+    "level": "central",
+    "state": null,
+    "category": "agriculture",
+    "ministry_or_department": "Ministry of Agriculture & Farmers Welfare",
+    "description": "Voluntary, contributory old-age pension scheme for small and marginal farmers, managed by LIC. The government matches the farmer's monthly contribution.",
+    "benefits": "Assured pension of ₹3,000 per month after age 60; spouse receives 50% as family pension. Monthly contribution ₹55 (entry at 18) to ₹200 (entry at 40), matched by the Centre.",
+    "eligibility_text": "Small and marginal farmers owning cultivable land up to 2 hectares as per state land records, with entry age between 18 and 40 years.",
+    "exclusions_text": "Not eligible: farmers covered by other statutory social security schemes such as NPS, ESIC or EPFO; those who opted for PM-SYM or PM Laghu Vyapari Maan-dhan; institutional landholders; constitutional post holders; government employees; income-tax payers; registered professionals.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 40,
+      "occupations": ["farmer"],
+      "requires_land_owner": true,
+      "max_land_hectares": 2.0,
+      "excludes_income_tax_payer": true,
+      "excludes_govt_employee": true,
+      "excludes_epfo_esic_nps": true,
+      "requires_bank_account": true
+    },
+    "fuzzy_conditions": [
+      "Not already enrolled in PM-SYM or PM Laghu Vyapari Maan-dhan"
+    ],
+    "documents_required": ["Aadhaar card", "Savings bank account / PM-KISAN account details", "Land records", "Age proof"],
+    "application_steps": [
+      "Visit a Common Service Centre (CSC) with Aadhaar and bank passbook, or self-enrol at maandhan.in.",
+      "VLE fills the form; the monthly contribution is calculated from your age.",
+      "Pay the first contribution in cash; later contributions are auto-debited.",
+      "Receive the Kisan Pension Account Number and card."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://PMkisan.gov.in/Documents/PM-KMY - FAQs.pdf",
+      "https://vikaspedia.in/schemesall/schemes-for-farmers/pm-kisan-maan-dhan-yojana"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pmfby",
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "level": "central",
+    "state": null,
+    "category": "agriculture",
+    "ministry_or_department": "Ministry of Agriculture & Farmers Welfare",
+    "description": "Crop insurance against yield loss from natural calamities, pests and diseases, with a low farmer premium; the rest of the premium is shared by the Centre and states.",
+    "benefits": "Insurance cover for notified crops. Farmer pays at most 2% of sum insured for kharif food/oilseed crops, 1.5% for rabi food/oilseed crops, and 5% for annual commercial/horticultural crops.",
+    "eligibility_text": "All farmers, including sharecroppers and tenant farmers, growing notified crops in notified areas and having an insurable interest in the crop. Enrolment is voluntary for loanee and non-loanee farmers.",
+    "exclusions_text": "Only available where the state has notified the scheme for that crop and season.",
+    "criteria": {
+      "occupations": ["farmer"]
+    },
+    "fuzzy_conditions": [
+      "The person's state has notified PMFBY for the current season (several states, including Gujarat at times, have opted out)",
+      "Grows a crop notified for their area",
+      "Tenant/sharecropper has the tenancy or sowing documents the state requires"
+    ],
+    "documents_required": ["Aadhaar card", "Land records or tenancy/sharecropping agreement", "Sowing certificate", "Bank passbook"],
+    "application_steps": [
+      "Before the season's cut-off date, apply at your bank (loanee farmers), CSC, insurance company agent, or pmfby.gov.in.",
+      "Choose the notified crop and area and pay the farmer share of the premium.",
+      "Report crop loss within 72 hours of a localised calamity via the Crop Insurance app or helpline."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.publicservicesmap.in/schemes/pradhan-mantri-fasal-bima-yojna-(pmfby)--pmfby",
+      "https://eparlib.nic.in/bitstream/123456789/675967/1/29452.pdf"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Gujarat exited PMFBY in 2020 and launched Mukhyamantri Kisan Sahay Yojana; reports in 2025 described talks on rejoining. Check the state's current notification before recommending."
+  },
+  {
+    "scheme_id": "kcc",
+    "name": "Kisan Credit Card (KCC)",
+    "level": "central",
+    "state": null,
+    "category": "agriculture",
+    "ministry_or_department": "Ministry of Agriculture & Farmers Welfare / Department of Financial Services (via banks, NABARD)",
+    "description": "Revolving credit facility from banks for crop cultivation, post-harvest needs and allied activities like dairy, poultry and fisheries, with interest subvention for prompt repayment.",
+    "benefits": "Short-term crop and working-capital credit at concessional interest (effective rate around 4% p.a. on prompt repayment under the interest subvention scheme); RuPay card for withdrawals. Budget 2025-26 raised the subvention-eligible limit to ₹5 lakh.",
+    "eligibility_text": "Owner-cultivators (individual or joint), tenant farmers, oral lessees and sharecroppers, SHGs/JLGs of farmers, and farmers engaged in animal husbandry or fisheries. Age 18 to 75; borrowers above 60 need a legal heir as co-borrower.",
+    "exclusions_text": "Existing agricultural loan defaulters are generally not sanctioned.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 75,
+      "occupations": ["farmer", "animal_husbandry", "fisher"]
+    },
+    "fuzzy_conditions": [
+      "Not a defaulter on an existing agricultural loan",
+      "If older than 60, has a legal heir who can be co-borrower"
+    ],
+    "documents_required": ["Application form", "Aadhaar / ID and address proof", "Land records or tenancy agreement", "Crop/livestock details", "Passport-size photo"],
+    "application_steps": [
+      "Visit a commercial bank, RRB, small finance bank or cooperative bank branch (or apply through the bank's website / PM-KISAN linked KCC drive).",
+      "Submit the KCC form with land/activity details.",
+      "Bank fixes the credit limit using the district scale of finance and issues the card."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/agriculture/agri-credit/revised-kisan-credit-card-scheme?lgn=en",
+      "https://www.pmfias.com/rupay-kisan-credit-card-kcc/"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "gj_kisan_sahay",
+    "name": "Mukhyamantri Kisan Sahay Yojana (Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "agriculture",
+    "ministry_or_department": "Revenue Department with Agriculture & Co-operation Department, Government of Gujarat",
+    "description": "Zero-premium state scheme that compensates Gujarat farmers for kharif crop loss caused by drought, excess rain or unseasonal rain. Launched in 2020 when Gujarat left PMFBY.",
+    "benefits": "Compensation per hectare depending on the extent of loss (reported up to ₹25,000 per hectare), for up to 4 hectares. No premium or prior registration.",
+    "eligibility_text": "Farmers of Gujarat whose kharif crop suffered at least 33% loss due to a notified natural calamity. Land-holding farmers and forest-rights (vanadhikar) holders recorded in land records.",
+    "exclusions_text": "Losses below 33% and non-notified events are not covered. Assistance capped at 4 hectares.",
+    "criteria": {
+      "states": ["Gujarat"],
+      "occupations": ["farmer"]
+    },
+    "fuzzy_conditions": [
+      "Kharif crop loss of 33% or more due to a notified natural calamity (drought, excess rain, unseasonal rain)",
+      "Applies within the window announced after the calamity"
+    ],
+    "documents_required": ["7/12 and 8-A land record extracts", "Aadhaar card", "Aadhaar-linked bank passbook", "Mobile number"],
+    "application_steps": [
+      "Wait for the government notification declaring affected talukas.",
+      "Apply through the village e-Gram centre (VCE operator) or the Krushi/Digital Gujarat portal within the window.",
+      "Revenue officials verify the loss; assistance is paid by DBT."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.gktoday.in/current-affairs/mukhya-mantri-kisan-sahay-yojana-launched-in-gujarat-replacing-pmfby",
+      "https://currentaffairs.adda247.com/mukhyamantri-kisan-sahay-yojana-gujarat-2026-eligibility-benefits-documents-required-and-how-to-apply/"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Eligibility is event-triggered: only recommend when the user mentions crop damage."
+  },
+  {
+    "scheme_id": "apy",
+    "name": "Atal Pension Yojana (APY)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Finance (administered by PFRDA)",
+    "description": "Government-backed contributory pension scheme, focused on unorganised-sector workers but open to any eligible citizen with a savings account.",
+    "benefits": "Guaranteed monthly pension of ₹1,000 to ₹5,000 from age 60 depending on contribution; the same pension continues to the spouse, and the corpus is returned to the nominee after both die.",
+    "eligibility_text": "Indian citizens aged 18 to 40 with a savings bank or post office savings account. From 1 October 2022, anyone who is or has been an income-tax payer cannot open a new APY account.",
+    "exclusions_text": "Income-tax payers (current or past) cannot join after 1 Oct 2022. Only one APY account per person.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 40,
+      "excludes_income_tax_payer": true,
+      "requires_bank_account": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Aadhaar card", "Savings bank / post office account", "Mobile number", "Nominee details"],
+    "application_steps": [
+      "Visit the bank or post office where you hold a savings account, or use the bank's net banking / APY app.",
+      "Fill the APY registration form, choose pension amount (₹1,000-₹5,000) and nominee.",
+      "Authorise auto-debit of the monthly/quarterly/half-yearly contribution."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://pfrda.org.in/web/pfrda/w/faqs/atal-pension-yojana",
+      "https://en.vikaspedia.in/schemesall/schemes-for-unemployed-and-poor/atal-pension-yojana"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pm_sym",
+    "name": "Pradhan Mantri Shram Yogi Maan-dhan (PM-SYM)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Labour & Employment",
+    "description": "Voluntary contributory pension scheme for unorganised workers such as street vendors, construction workers, domestic workers and labourers. The Centre matches the worker's contribution.",
+    "benefits": "Minimum assured pension of ₹3,000 per month after age 60; spouse gets 50% as family pension. Contribution ₹55-₹200 per month depending on entry age.",
+    "eligibility_text": "Unorganised workers aged 18 to 40 with monthly income of ₹15,000 or less, a savings bank / Jan Dhan account and Aadhaar.",
+    "exclusions_text": "Not for members of EPFO, ESIC or NPS (government-funded), or income-tax payers.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 40,
+      "occupations": ["farm_labourer", "animal_husbandry", "fisher", "construction_worker", "street_vendor", "domestic_worker", "artisan", "driver", "gig_worker", "self_employed", "farmer"],
+      "max_monthly_income": 15000,
+      "excludes_epfo_esic_nps": true,
+      "excludes_income_tax_payer": true,
+      "requires_bank_account": true
+    },
+    "fuzzy_conditions": [
+      "Works in the unorganised sector (not a regular salaried job with social security)"
+    ],
+    "documents_required": ["Aadhaar card", "Savings bank / Jan Dhan account with IFSC", "Mobile number"],
+    "application_steps": [
+      "Visit a Common Service Centre (CSC) or self-enrol at maandhan.in.",
+      "Enrol with Aadhaar and bank details; self-certify eligibility.",
+      "Pay the first contribution in cash; later contributions are auto-debited."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/social-welfare/unorganised-sector-1/schemes-unorganised-sector/pradhan-mantri-shram-yogi-maandhan",
+      "https://wb.gov.in/government-schemes-details-pradhan-mantri-shram-yogi-mandhan.aspx"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Small farmers usually go to PM-KMY instead; a person cannot hold both."
+  },
+  {
+    "scheme_id": "ignoaps",
+    "name": "Indira Gandhi National Old Age Pension Scheme (IGNOAPS)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Rural Development (National Social Assistance Programme)",
+    "description": "Non-contributory monthly pension for elderly people from BPL households. States add their own top-up to the central amount.",
+    "benefits": "Central share: ₹200 per month (age 60-79) and ₹500 per month (80+). States add a top-up; Gujarat pays a combined ₹1,000 (60-79) and ₹1,250 (80+).",
+    "eligibility_text": "Persons aged 60 years or above belonging to a below-poverty-line (BPL) household.",
+    "exclusions_text": "",
+    "criteria": {
+      "min_age": 60,
+      "requires_bpl": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Age proof", "BPL card / BPL score certificate", "Aadhaar card", "Bank or post office passbook", "Residence proof"],
+    "application_steps": [
+      "Apply at the Gram Panchayat, Taluka Mamlatdar office, or the state social welfare portal (in Gujarat: NSAP / Digital Gujarat).",
+      "Submit the form with age and BPL proof.",
+      "After sanction, pension is paid monthly by DBT."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.wikipedia.com/wiki/National_Social_Assistance_Scheme",
+      "https://patan.nic.in/?p=27223",
+      "https://www.newkerala.com/news/a/gujarat-niradhar-vridhha-pension-yojana-addresses-needs-elderly-669.htm"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "BPL elders in Gujarat are covered here; non-BPL low-income elders go to the state's Niradhar Vrudh Pension."
+  },
+  {
+    "scheme_id": "ignwps",
+    "name": "Indira Gandhi National Widow Pension Scheme (IGNWPS)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Rural Development (National Social Assistance Programme)",
+    "description": "Non-contributory monthly pension for widows from BPL households.",
+    "benefits": "Central share of ₹300 per month, plus any state top-up.",
+    "eligibility_text": "Widows aged 40 to 79 years belonging to a BPL household.",
+    "exclusions_text": "Not for remarried women. At 80 the beneficiary moves to the old-age pension.",
+    "criteria": {
+      "genders": ["female"],
+      "marital_status": ["widowed"],
+      "min_age": 40,
+      "max_age": 79,
+      "requires_bpl": true
+    },
+    "fuzzy_conditions": ["Has not remarried"],
+    "documents_required": ["Husband's death certificate", "Age proof", "BPL card", "Aadhaar card", "Bank passbook"],
+    "application_steps": [
+      "Apply at the Gram Panchayat / Taluka office or the state social welfare portal.",
+      "Attach the death certificate and BPL proof.",
+      "Pension is paid monthly by DBT after sanction."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://socialwelfarekashmir.jk.gov.in/IGNWPS.html",
+      "https://www.citizennest.com/guide/indira-gandhi-pension-scheme"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "In Gujarat, widows are also covered by the state's Ganga Swaroopa scheme, which has a broader income-based eligibility."
+  },
+  {
+    "scheme_id": "igndps",
+    "name": "Indira Gandhi National Disability Pension Scheme (IGNDPS)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Rural Development (National Social Assistance Programme)",
+    "description": "Non-contributory monthly pension for persons with severe or multiple disabilities from BPL households.",
+    "benefits": "Central share of ₹300 per month, plus any state top-up.",
+    "eligibility_text": "Persons aged 18 to 79 with 80% or more disability, belonging to a BPL household.",
+    "exclusions_text": "At 80 the beneficiary is moved to the old-age pension.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 79,
+      "min_disability_percent": 80,
+      "requires_bpl": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Disability certificate / UDID card showing 80%+", "Age proof", "BPL card", "Aadhaar card", "Bank passbook"],
+    "application_steps": [
+      "Apply at the block/taluka office or the state social welfare portal.",
+      "Attach the disability certificate from the medical board and BPL proof.",
+      "Pension is paid monthly by DBT after sanction."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://saksham.bihar.gov.in/NDNPS.aspx",
+      "https://www.outlookmoney.com/retirement/pension/disability-pension-when-can-you-claim-it"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pmjjby",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Finance (Department of Financial Services)",
+    "description": "One-year renewable term life insurance for any cause of death, offered through banks and post offices.",
+    "benefits": "₹2 lakh life cover for an annual premium of ₹436, auto-debited. Cover continues up to age 55 if renewed.",
+    "eligibility_text": "Savings bank or post office account holders aged 18 to 50 who consent to auto-debit. Aadhaar is the primary KYC.",
+    "exclusions_text": "Only one PMJJBY policy per person. Deaths from non-accidental causes in the first 30 days after enrolment (lien period) are not covered.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 50,
+      "requires_bank_account": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Savings bank / post office account", "Aadhaar card", "Consent-cum-declaration form", "Nominee details"],
+    "application_steps": [
+      "Fill the PMJJBY form at your bank/post office branch or via net banking / Jan Suraksha portal.",
+      "Authorise auto-debit of ₹436 each year (around 31 May)."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.icici.bank.in/personal-banking/insurance/government-schemes/pm-service-my-plan",
+      "https://saurashtra.bank.in/?p=1070"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pmsby",
+    "name": "Pradhan Mantri Suraksha Bima Yojana (PMSBY)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Finance (Department of Financial Services)",
+    "description": "One-year renewable accident insurance offered through banks and post offices.",
+    "benefits": "₹2 lakh for accidental death or total permanent disability, ₹1 lakh for partial permanent disability, for ₹20 per year.",
+    "eligibility_text": "Savings bank or post office account holders aged 18 to 70 who consent to auto-debit.",
+    "exclusions_text": "Only through one account per person.",
+    "criteria": {
+      "min_age": 18,
+      "max_age": 70,
+      "requires_bank_account": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Savings bank / post office account", "Aadhaar card", "Consent-cum-declaration form", "Nominee details"],
+    "application_steps": [
+      "Fill the PMSBY form at your bank/post office branch or via net banking / Jan Suraksha portal.",
+      "Authorise auto-debit of ₹20 each year (around 1 June)."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.icici.bank.in/personal-banking/insurance/government-schemes/pm-service-my-plan",
+      "https://ttc.bank.in/pmsby-pmjjby/"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "e_shram",
+    "name": "e-Shram Registration (National Database of Unorganised Workers)",
+    "level": "central",
+    "state": null,
+    "category": "pension_social_security",
+    "ministry_or_department": "Ministry of Labour & Employment",
+    "description": "Free registration that gives unorganised workers a 12-digit Universal Account Number (UAN) card and a single window to social-security schemes.",
+    "benefits": "e-Shram UAN card; accidental insurance cover of ₹2 lakh (death/permanent disability) and ₹1 lakh (partial disability) via PMSBY linkage; access to other welfare schemes through the portal.",
+    "eligibility_text": "Unorganised workers (including self-employed, home-based, wage and gig workers) aged 16 to 59 with an Aadhaar-linked mobile number.",
+    "exclusions_text": "Not for EPFO/ESIC members, government employees, or income-tax payers.",
+    "criteria": {
+      "min_age": 16,
+      "max_age": 59,
+      "occupations": ["farmer", "farm_labourer", "animal_husbandry", "fisher", "construction_worker", "street_vendor", "domestic_worker", "artisan", "driver", "gig_worker", "self_employed"],
+      "excludes_epfo_esic_nps": true,
+      "excludes_income_tax_payer": true,
+      "excludes_govt_employee": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Aadhaar card", "Aadhaar-linked mobile number", "Bank account details"],
+    "application_steps": [
+      "Go to eshram.gov.in and click 'Register on eShram', or visit a CSC.",
+      "Verify with Aadhaar-linked mobile OTP and declare you are not an EPFO/ESIC member.",
+      "Fill occupation, address and bank details; download the UAN card."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://upbeta.eshram.gov.in/faqs",
+      "https://wb.gov.in/government-schemes-details-e-shram-card.aspx"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "gj_old_age_pension",
+    "name": "Niradhar Vrudh Pension / Vrudh Sahay Yojana (Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "pension_social_security",
+    "ministry_or_department": "Social Justice & Empowerment Department, Government of Gujarat",
+    "description": "Gujarat state pension for low-income senior citizens who are not covered by the central BPL old-age pension.",
+    "benefits": "₹1,000 per month for ages 60-79 and ₹1,250 per month for 80+, paid by DBT.",
+    "eligibility_text": "Residents of Gujarat aged 60 or above with annual family income up to ₹1,20,000 (rural) or ₹1,50,000 (urban).",
+    "exclusions_text": "Elders on the BPL list are covered under IGNOAPS (with Gujarat's top-up) instead.",
+    "criteria": {
+      "states": ["Gujarat"],
+      "min_age": 60,
+      "max_family_income_rural": 120000,
+      "max_family_income_urban": 150000
+    },
+    "fuzzy_conditions": [
+      "Not already receiving IGNOAPS (BPL elders should apply under IGNOAPS)",
+      "Destitute / lacks adequate family support (verify current rule on adult sons)"
+    ],
+    "documents_required": ["Age proof", "Income certificate from Mamlatdar", "Aadhaar card", "Bank passbook", "Residence proof"],
+    "application_steps": [
+      "Apply on the e-Samaj Kalyan / Digital Gujarat portal or at the Taluka Mamlatdar office.",
+      "Mamlatdar verifies and approves; appeal to the Prant officer within 60 days if rejected.",
+      "Pension is paid monthly by DBT."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.newkerala.com/news/a/gujarat-niradhar-vridhha-pension-yojana-addresses-needs-elderly-669.htm",
+      "https://eligibilitytools-in.pages.dev/tools/old-age-pension-checker/gujarat/"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Sources disagree on amounts and conditions; the ₹1,000/₹1,250 figures come from a May 2026 report. Verify against sje.gujarat.gov.in before relying on them."
+  },
+  {
+    "scheme_id": "gj_ganga_swaroopa",
+    "name": "Ganga Swaroopa Arthik Sahay Yojana (Gujarat widow pension)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "pension_social_security",
+    "ministry_or_department": "Women & Child Development Department, Government of Gujarat",
+    "description": "Monthly financial assistance for widows in Gujarat (formerly Vidhva Sahay Yojana).",
+    "benefits": "₹1,250 per month by DBT.",
+    "eligibility_text": "Widows aged 18 or above who are residents of Gujarat, with annual family income up to ₹1,20,000 (rural) or ₹1,50,000 (urban).",
+    "exclusions_text": "Not for women who have remarried (they may apply for the Ganga Swaroopa Punah Lagna remarriage assistance instead).",
+    "criteria": {
+      "states": ["Gujarat"],
+      "genders": ["female"],
+      "marital_status": ["widowed"],
+      "min_age": 18,
+      "max_family_income_rural": 120000,
+      "max_family_income_urban": 150000
+    },
+    "fuzzy_conditions": ["Has not remarried"],
+    "documents_required": ["Husband's death certificate", "Age proof", "Income certificate", "Ration card", "Aadhaar card", "Bank passbook", "Passport-size photo"],
+    "application_steps": [
+      "Apply through Digital Gujarat or at the Taluka Mamlatdar / social welfare office.",
+      "Mamlatdar verifies documents and sanctions the pension.",
+      "Assistance is credited in the first week of every month."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/schemesall/state-specific-schemes/welfare-schemes-of-gujarat/ganga-swaroopa-arthik-sahay-yojana?lgn=en",
+      "https://www.publicservicesmap.in/schemes/ganga-swarupa-arthik-sahay-yojana--gj-8779?lang=en"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "One older source states an upper age limit; current myScheme listing gives 18+ only."
+  },
+  {
+    "scheme_id": "gj_sant_surdas",
+    "name": "Sant Surdas Scheme (Gujarat disability assistance)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "pension_social_security",
+    "ministry_or_department": "Social Justice & Empowerment Department (Director Social Defence), Government of Gujarat",
+    "description": "Monthly assistance for children and adolescents with severe disabilities from BPL families in Gujarat.",
+    "benefits": "₹1,000 per month by DBT until the beneficiary turns 18.",
+    "eligibility_text": "Natives of Gujarat aged 0-17 with a qualifying disability, registered on the BPL list. The disability threshold was lowered from 80% to 60% from FY 2025-26.",
+    "exclusions_text": "",
+    "criteria": {
+      "states": ["Gujarat"],
+      "min_age": 0,
+      "max_age": 17,
+      "min_disability_percent": 60,
+      "requires_bpl": true
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Disability certificate / UDID card", "BPL score certificate (rural) or BPL card (urban)", "Aadhaar card", "Bank passbook", "Age proof"],
+    "application_steps": [
+      "Register on the e-Samaj Kalyan portal (esamajkalyan.gujarat.gov.in) and choose Sant Surdas Scheme.",
+      "Upload the disability certificate and BPL proof.",
+      "Assistance is paid monthly by DBT after approval."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.myscheme.gov.in/schemes/sss-gujarat",
+      "https://deshgujarat.com/?p=268958"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Some 2025 reports say the BPL and age conditions were also relaxed; the myScheme listing still shows them. Verify on sje.gujarat.gov.in."
+  },
+  {
+    "scheme_id": "nmmss",
+    "name": "National Means-cum-Merit Scholarship Scheme (NMMSS)",
+    "level": "central",
+    "state": null,
+    "category": "education",
+    "ministry_or_department": "Ministry of Education (Department of School Education & Literacy)",
+    "description": "Merit-cum-means scholarship to reduce drop-outs after Class 8 among students from low-income families in government schools.",
+    "benefits": "₹12,000 per year from Class 9 to Class 12.",
+    "eligibility_text": "Students studying in Class 8 in a government, government-aided or local-body school, with at least 55% marks (50% for SC/ST) in the previous class and parental income from all sources not above ₹3.5 lakh per year. Must clear the state-level selection test.",
+    "exclusions_text": "Students of Kendriya Vidyalayas, Jawahar Navodaya Vidyalayas, Sainik Schools, residential government schools and private schools are not eligible.",
+    "criteria": {
+      "education_levels": ["class_8"],
+      "max_family_income": 350000
+    },
+    "fuzzy_conditions": [
+      "Studies in a government, government-aided or local-body school (not KV/JNV/Sainik/private)",
+      "Scored at least 55% in the previous class (50% for SC/ST)",
+      "Clears the state NMMS selection test (MAT and SAT)"
+    ],
+    "documents_required": ["Income certificate", "Previous class marksheet", "Caste certificate (if SC/ST)", "Aadhaar", "Bank account"],
+    "application_steps": [
+      "Apply for the state NMMS exam through the school / state examination board (usually Aug-Sept).",
+      "Write the selection test in November/December.",
+      "Selected students apply on the National Scholarship Portal (scholarships.gov.in) and renew each year."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://en.vikaspedia.in/education/policies-and-schemes/scholarships/pre-metric-scholarships/national-meanscummerit-scholarship-scheme",
+      "https://www.newkerala.com/news/o/applications-nmmss-scholarship-open-till-sep-30-education-ministry-328",
+      "https://myscheme.gov.in/schemes/nmmss"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "The minimum-marks rule is relaxed for SC/ST, so it is kept as a fuzzy condition."
+  },
+  {
+    "scheme_id": "pm_usp_csss",
+    "name": "PM-USP Central Sector Scheme of Scholarship for College and University Students",
+    "level": "central",
+    "state": null,
+    "category": "education",
+    "ministry_or_department": "Ministry of Education (Department of Higher Education)",
+    "description": "Merit-cum-means scholarship for students who finished in the top 20% of their Class 12 board and are in regular degree courses.",
+    "benefits": "₹12,000 per year at graduation level and ₹20,000 per year at post-graduation level (professional courses: ₹20,000 in 4th/5th year).",
+    "eligibility_text": "Students above the 80th percentile of successful candidates in their Class 12 board and stream, pursuing regular (not distance) degree courses at recognised institutions, with family income up to ₹4.5 lakh per year.",
+    "exclusions_text": "Not for students receiving any other scholarship or fee waiver; diploma students are not covered.",
+    "criteria": {
+      "education_levels": ["ug", "pg"],
+      "min_exam_percentile": 80,
+      "max_family_income": 450000
+    },
+    "fuzzy_conditions": [
+      "Pursuing a regular (not correspondence/distance) course",
+      "Not receiving any other scholarship or fee reimbursement"
+    ],
+    "documents_required": ["Class 12 marksheet", "Income certificate", "College bonafide certificate / fee receipt", "Caste certificate (if applicable)", "Aadhaar-seeded bank account"],
+    "application_steps": [
+      "Register on the National Scholarship Portal (scholarships.gov.in) with One-Time Registration (OTR).",
+      "Select 'Central Sector Scheme of Scholarship' and fill course and income details.",
+      "Institute and state nodal officers verify; scholarship is paid by DBT. Renew each year with 50% marks and 75% attendance."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.freepressjournal.in/education/know-your-rights-heres-how-college-and-university-students-can-avail-benefits-of-scholarship-scheme",
+      "https://www.publicservicesmap.in/schemes/pradhan-mantri-uchchatar-shiksha-protsahan-(pm-usp)-central-sector-schem--csss-cus?lang=en"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pms_sc",
+    "name": "Post-Matric Scholarship for Scheduled Caste Students",
+    "level": "central",
+    "state": null,
+    "category": "education",
+    "ministry_or_department": "Ministry of Social Justice & Empowerment (implemented by states)",
+    "description": "Centrally sponsored scholarship covering course fees and a maintenance allowance for SC students studying beyond Class 10.",
+    "benefits": "Reimbursement of compulsory non-refundable fees plus an annual academic/maintenance allowance that depends on the course group.",
+    "eligibility_text": "Scheduled Caste students who have passed Class 10 and are in Class 11-12, diploma, ITI, graduate or postgraduate courses at recognised institutions, with parental income up to ₹2.5 lakh per year.",
+    "exclusions_text": "",
+    "criteria": {
+      "social_categories": ["sc"],
+      "education_levels": ["class_11_12", "diploma", "ug", "pg"],
+      "max_family_income": 250000
+    },
+    "fuzzy_conditions": ["Studying at a recognised institution"],
+    "documents_required": ["SC caste certificate", "Income certificate", "Previous marksheets", "Fee receipt / admission proof", "Aadhaar-seeded bank account"],
+    "application_steps": [
+      "Apply on the state scholarship portal (Digital Gujarat in Gujarat) or the National Scholarship Portal.",
+      "Upload caste, income and admission documents.",
+      "Institute and district officers verify; payment is by DBT."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.pw.live/upsc/exams/post-matric-scholarship-for-sc-students",
+      "https://news.careers360.com/post-matric-scholarship-pms-for-sc-rules-change-msje-course-fee-cap-4-5-lakh-income-limit-next-year-social-justice-and-empowerment"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "March 2026 reports say the government plans to raise the income limit to ₹4.5 lakh from next year; update when notified."
+  },
+  {
+    "scheme_id": "pm_yasasvi_pms",
+    "name": "PM-YASASVI Post-Matric Scholarship for OBC, EBC and DNT Students",
+    "level": "central",
+    "state": null,
+    "category": "education",
+    "ministry_or_department": "Ministry of Social Justice & Empowerment (implemented by states)",
+    "description": "Post-matric scholarship under the PM-YASASVI umbrella for students from OBC, Economically Backward Class and De-notified Tribe communities.",
+    "benefits": "Academic allowance plus tuition fee support, roughly ₹5,000 to ₹20,000 per year depending on the course group.",
+    "eligibility_text": "OBC, EBC or DNT students studying after Class 10 (Class 11-12, diploma, degree, postgraduate) whose parents' or guardians' annual income does not exceed ₹2.5 lakh.",
+    "exclusions_text": "",
+    "criteria": {
+      "social_categories": ["obc"],
+      "education_levels": ["class_11_12", "diploma", "ug", "pg"],
+      "max_family_income": 250000
+    },
+    "fuzzy_conditions": ["Belongs to OBC, EBC or DNT (EBC/DNT students are also covered even if not OBC)"],
+    "documents_required": ["OBC/EBC/DNT certificate", "Income certificate", "Previous marksheet", "Fee receipt", "Aadhaar-seeded bank account"],
+    "application_steps": [
+      "Apply on Digital Gujarat (for Gujarat) or the National Scholarship Portal.",
+      "Upload category, income and admission documents.",
+      "Payment is made by DBT after verification."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.myscheme.gov.in/schemes/pm-yasasvipmsobcebcdnts",
+      "https://www.publicservicesmap.in/schemes/post-matric-scholarship-scheme-for-obc%2C-ebc%2C-dnt-students-of-the-state-u--gj-8846"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pm_vidyalaxmi",
+    "name": "PM-Vidyalaxmi (education loan scheme)",
+    "level": "central",
+    "state": null,
+    "category": "education",
+    "ministry_or_department": "Ministry of Education (Department of Higher Education)",
+    "description": "Collateral-free, guarantor-free education loans for students admitted to Quality Higher Education Institutions (QHEIs, chosen by NIRF ranking), with interest subvention for lower-income families.",
+    "benefits": "Collateral-free loan covering tuition and course costs; 75% credit guarantee on loans up to ₹7.5 lakh; 3% interest subvention during the moratorium on loans up to ₹10 lakh for family income up to ₹8 lakh (full subvention for income up to ₹4.5 lakh in technical/professional courses via PM-USP CSIS).",
+    "eligibility_text": "Students who secured admission on merit to a QHEI. For the 3% interest subvention, annual family income must be up to ₹8 lakh and the student must not receive another government scholarship, interest subvention or fee reimbursement.",
+    "exclusions_text": "Management-quota admissions are not eligible.",
+    "criteria": {
+      "education_levels": ["ug", "pg", "diploma"],
+      "max_family_income": 800000,
+      "required_intents": ["education_loan"]
+    },
+    "fuzzy_conditions": [
+      "Admitted on merit (not management quota) to an institution on the QHEI list",
+      "Not receiving another central/state scholarship, interest subvention or fee reimbursement"
+    ],
+    "documents_required": ["Admission letter", "Income certificate", "Aadhaar", "Fee structure", "Caste/disability certificate if applicable"],
+    "application_steps": [
+      "Register on the PM-Vidyalaxmi portal using Aadhaar.",
+      "Fill the common education loan application and choose banks.",
+      "Apply for interest subvention on the portal if eligible; subvention is credited via the PM-Vidyalaxmi digital rupee wallet."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.myscheme.gov.in/schemes/pmvs",
+      "https://www.pmindia.gov.in/en/news_updates/cabinet-approves-pm-vidyalaxmi-scheme-to-provide-financial-support-to-meritorious-students-so-that-financial-constraints-do-not-prevent-any-youth-of-india-from-pursuing-quality-higher-education/"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Only recommend when the user wants an education loan."
+  },
+  {
+    "scheme_id": "gj_namo_lakshmi",
+    "name": "Namo Lakshmi Yojana (Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "education",
+    "ministry_or_department": "Education Department, Government of Gujarat",
+    "description": "Financial assistance for girls in Classes 9-12 in Gujarat to reduce drop-outs and support nutrition and education.",
+    "benefits": "₹50,000 over four years: ₹10,000 per year in Classes 9-10 and ₹15,000 per year in Classes 11-12 (monthly instalments plus a lump sum on passing the board exam).",
+    "eligibility_text": "Girl students of Gujarat studying in Classes 9-12 in government, aided or private schools, with annual family income below ₹6 lakh. Regular attendance is required for monthly payments.",
+    "exclusions_text": "",
+    "criteria": {
+      "states": ["Gujarat"],
+      "genders": ["female"],
+      "education_levels": ["class_9_10", "class_11_12"],
+      "max_family_income": 600000
+    },
+    "fuzzy_conditions": ["Maintains regular school attendance"],
+    "documents_required": ["Student's Aadhaar", "Parent's Aadhaar", "Bank account details", "Income certificate (for private-school students)", "Mobile number"],
+    "application_steps": [
+      "Contact the school's nodal officer, who registers eligible girls on the state portal.",
+      "Submit Aadhaar, bank and income details through the school.",
+      "Payments are made by DBT."
+    ],
+    "application_mode": "offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/schemesall/state-specific-schemes/welfare-schemes-of-gujarat/namo-lakshmi-yojana",
+      "https://theprint.in/india/10-8-lakh-gujarat-girls-took-benefit-of-namo-lakshmi-yojana-school-enrolment-ratio-up-16-pc/2685312"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "One 2024 report said girls in government/aided schools qualify regardless of income; the ₹6 lakh limit is applied here as the stricter reading."
+  },
+  {
+    "scheme_id": "gj_namo_saraswati",
+    "name": "Namo Saraswati Vigyan Sadhana Yojana (Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "education",
+    "ministry_or_department": "Education Department, Government of Gujarat",
+    "description": "Scholarship encouraging boys and girls in Gujarat to take the science stream in Classes 11 and 12.",
+    "benefits": "₹25,000 over two years: ₹10,000 in Class 11 and ₹15,000 in Class 12 (₹1,000 per month plus ₹5,000 after passing the Class 12 board exam), paid to the mother's bank account.",
+    "eligibility_text": "Students of Gujarat in Class 11 or 12 science with at least 50% in the Class 10 board exam. Students from government or grant-in-aid schools qualify; those who studied Class 9-10 in self-financed schools must have family income up to ₹6 lakh.",
+    "exclusions_text": "",
+    "criteria": {
+      "states": ["Gujarat"],
+      "education_levels": ["class_11_12"],
+      "streams": ["science"],
+      "min_exam_percent": 50,
+      "max_family_income": 600000
+    },
+    "fuzzy_conditions": ["Studies in a government/aided school, or meets the income limit if from a self-financed school"],
+    "documents_required": ["Class 10 marksheet", "Aadhaar of student and mother", "Mother's bank passbook", "Income certificate (if from self-financed school)", "Admission proof for Class 11 science"],
+    "application_steps": [
+      "The school nodal officer registers eligible students on the state portal.",
+      "Submit Aadhaar and bank details through the school.",
+      "Monthly payments are made by DBT."
+    ],
+    "application_mode": "offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/schemesall/state-specific-schemes/welfare-schemes-of-gujarat/namo-saraswati-vigyan-sadhana-yojana?lgn=en",
+      "https://www.outlookmoney.com/news/namo-lakshmi-and-namo-saraswati-yojana-check-scholarship-details"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "The income limit only applies to students from self-financed schools; the checker applies it to everyone, so a judge should override for govt/aided school students."
+  },
+  {
+    "scheme_id": "gj_mysy",
+    "name": "Mukhyamantri Yuva Swavalamban Yojana (MYSY, Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "education",
+    "ministry_or_department": "Education Department, Government of Gujarat",
+    "description": "Gujarat scholarship for meritorious students from lower-income families in diploma, degree and professional courses.",
+    "benefits": "Tuition fee assistance of 50% of fees up to a cap (e.g. ₹50,000/yr for engineering/pharmacy degrees, ₹25,000 for diploma engineering, ₹10,000 for B.Com/BBA/BCA/B.Sc., ₹2 lakh/yr for medical), plus hostel grant ₹1,200/month and book/instrument grants.",
+    "eligibility_text": "Domicile students of Gujarat with 80 percentile or more in Class 10 (for diploma) or Class 12 (for degree), and annual family income up to ₹6 lakh. Diploma-to-degree students need 65% in the diploma.",
+    "exclusions_text": "Repeaters are not eligible.",
+    "criteria": {
+      "states": ["Gujarat"],
+      "education_levels": ["diploma", "ug"],
+      "min_exam_percentile": 80,
+      "max_family_income": 600000
+    },
+    "fuzzy_conditions": ["Admitted to a recognised course in Gujarat in the first year (renewal needs 50% marks and 75% attendance)"],
+    "documents_required": ["Class 10/12 marksheet", "Income certificate from Mamlatdar", "Domicile certificate", "Admission letter and fee receipt", "Aadhaar", "Bank passbook", "Affidavit"],
+    "application_steps": [
+      "Apply on the MYSY portal / Digital Gujarat during the application window.",
+      "Get documents verified at a MYSY help centre.",
+      "Assistance is paid to the student's bank account."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://myscheme.gov.in/schemes/mysy",
+      "https://www.darshan.ac.in/scholarships"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pmmvy",
+    "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY 2.0)",
+    "level": "central",
+    "state": null,
+    "category": "women_child",
+    "ministry_or_department": "Ministry of Women & Child Development (Mission Shakti)",
+    "description": "Maternity benefit to compensate wage loss and encourage health-seeking behaviour, plus an incentive for a second girl child.",
+    "benefits": "₹5,000 for the first child in two instalments; ₹6,000 in one instalment if the second child is a girl.",
+    "eligibility_text": "Pregnant women and lactating mothers for the first child, and for the second child if it is a girl. The woman must belong to a disadvantaged group: SC/ST, partly or fully disabled (40%+), BPL ration card holder, PMJAY beneficiary, e-Shram card holder, woman farmer under PM-KISAN, MGNREGA job card holder, net family income below ₹8 lakh, or AWW/AWH/ASHA.",
+    "exclusions_text": "Women in regular employment with central/state government or PSUs, or getting similar benefits under any law, are not eligible.",
+    "criteria": {
+      "genders": ["female"],
+      "requires_pregnant_or_lactating": true,
+      "excludes_govt_employee": true,
+      "any_of": [
+        {"max_family_income": 800000},
+        {"requires_bpl": true},
+        {"social_categories": ["sc", "st"]},
+        {"min_disability_percent": 40}
+      ]
+    },
+    "fuzzy_conditions": ["The pregnancy is for the first living child, or the second child is a girl"],
+    "documents_required": ["Aadhaar", "MCP (Mother and Child Protection) card", "Eligibility proof (income certificate, BPL/NFSA ration card, e-Shram card, SC/ST certificate, etc.)", "Bank/post office account", "Child's birth certificate (for later instalments)"],
+    "application_steps": [
+      "Register at the Anganwadi Centre or health facility, or on pmmvy.wcd.gov.in, within 270 days of childbirth.",
+      "First instalment after pregnancy registration and at least one ante-natal check-up.",
+      "Second instalment after birth registration and the first cycle of immunisation."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/social-welfare/women-and-child-development/women-development-1/pradhan-mantri-matru-vandana-yojana",
+      "https://pwonlyias.com/?p=237541"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "ssy",
+    "name": "Sukanya Samriddhi Yojana (SSY)",
+    "level": "central",
+    "state": null,
+    "category": "women_child",
+    "ministry_or_department": "Ministry of Finance (National Savings Institute)",
+    "description": "Government-backed small-savings account for a girl child under Beti Bachao Beti Padhao, with tax-free returns.",
+    "benefits": "Interest of 8.2% p.a. compounded annually (rate for 2026 quarters); deposits from ₹250 to ₹1.5 lakh a year for 15 years; matures at 21 years; EEE tax status.",
+    "eligibility_text": "A parent or legal guardian can open the account for a resident Indian girl child below 10 years of age. Maximum two accounts per family (third allowed for twins/triplets).",
+    "exclusions_text": "Non-resident girls cannot open an account.",
+    "criteria": {
+      "child": {"gender": "female", "max_age": 9}
+    },
+    "fuzzy_conditions": ["Family has not already opened SSY accounts for two other daughters"],
+    "documents_required": ["Girl's birth certificate", "Parent/guardian Aadhaar and PAN", "Address proof", "Photographs"],
+    "application_steps": [
+      "Visit a post office or authorised bank branch.",
+      "Fill the SSY account opening form with the initial deposit (minimum ₹250).",
+      "Deposit at least ₹250 every financial year for 15 years."
+    ],
+    "application_mode": "offline",
+    "source_urls": [
+      "https://fermor.in/blogs/sukanya-samriddhi-yojana-2026",
+      "https://www.bajajfinserv.in/sukanya-samriddhi-yojana"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Interest rate is revised quarterly."
+  },
+  {
+    "scheme_id": "pmuy",
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY 2.0)",
+    "level": "central",
+    "state": null,
+    "category": "women_child",
+    "ministry_or_department": "Ministry of Petroleum & Natural Gas",
+    "description": "Deposit-free LPG connection in the name of an adult woman from a poor household.",
+    "benefits": "Deposit-free LPG connection with first refill and stove free of cost; targeted subsidy on refills.",
+    "eligibility_text": "Adult women (18+) from poor households with no existing LPG connection in the household. Eligible categories include SC/ST households, PMAY-G beneficiaries, Most Backward Classes, Antyodaya Anna Yojana, tea garden tribes, forest dwellers, island residents, SECC households, or any poor household that submits a 14-point declaration.",
+    "exclusions_text": "No connection if anyone in the household already has an LPG connection. Men cannot apply.",
+    "criteria": {
+      "genders": ["female"],
+      "min_age": 18,
+      "requires_no_lpg_connection": true
+    },
+    "fuzzy_conditions": ["Household is poor: belongs to a listed category (SC/ST, AAY, PMAY-G, SECC, etc.) or can sign the 14-point poor-household declaration"],
+    "documents_required": ["Aadhaar of applicant and all adult family members", "Ration card or family composition document (self-declaration for migrants)", "Bank account and IFSC", "14-point declaration", "Category certificate if applying under a category"],
+    "application_steps": [
+      "Apply at the nearest LPG distributor or online at pmuy.gov.in.",
+      "Submit KYC, family Aadhaar and the declaration.",
+      "Distributor inspects the premises and releases the connection."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://mopng.gov.in/files/marketing/lpg/75L-PMUY-SoP-10102023-(1).pdf",
+      "https://www.publicservicesmap.in/schemes/pradhan-mantri-ujjwala-yojana-2-0--pmuy2?lang=en"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "jsy",
+    "name": "Janani Suraksha Yojana (JSY)",
+    "level": "central",
+    "state": null,
+    "category": "women_child",
+    "ministry_or_department": "Ministry of Health & Family Welfare (National Health Mission)",
+    "description": "Cash assistance to promote institutional deliveries among poor pregnant women.",
+    "benefits": "In High Performing States such as Gujarat: ₹700 (rural) / ₹600 (urban) for delivery in a government or accredited facility. In Low Performing States: ₹1,400 (rural) / ₹1,000 (urban).",
+    "eligibility_text": "In Low Performing States (UP, Uttarakhand, Bihar, Jharkhand, MP, Chhattisgarh, Assam, Rajasthan, Odisha, J&K) all women delivering in government facilities. In High Performing States, including Gujarat, BPL, SC and ST women delivering in government or accredited private institutions.",
+    "exclusions_text": "",
+    "criteria": {
+      "genders": ["female"],
+      "requires_pregnant_or_lactating": true,
+      "any_of": [
+        {"requires_bpl": true},
+        {"social_categories": ["sc", "st"]},
+        {"states": ["Uttar Pradesh", "Uttarakhand", "Bihar", "Jharkhand", "Madhya Pradesh", "Chhattisgarh", "Assam", "Rajasthan", "Odisha", "Jammu and Kashmir"]}
+      ]
+    },
+    "fuzzy_conditions": ["Delivers (or delivered) in a government or JSY-accredited health facility"],
+    "documents_required": ["MCP / JSY card", "Aadhaar", "Bank passbook", "BPL or SC/ST certificate (in High Performing States)", "Delivery certificate"],
+    "application_steps": [
+      "Register the pregnancy with the ASHA/ANM or at the nearest health centre.",
+      "Deliver at a government or accredited facility with the JSY card.",
+      "Cash assistance is paid by DBT after delivery."
+    ],
+    "application_mode": "offline",
+    "source_urls": [
+      "https://nhm.gov.in/index1.php%3Flang%3D1%26level%3D3%26lid%3D309%26sublinkid%3D841",
+      "https://eparlib.nic.in/bitstream/123456789/960584/1/AU4273.pdf"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Older guidelines had an age-19 and two-live-birth limit in HPS; the latest parliamentary answer says regardless of age."
+  },
+  {
+    "scheme_id": "gj_vahali_dikri",
+    "name": "Vahali Dikri Yojana (Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "women_child",
+    "ministry_or_department": "Women & Child Development Department, Government of Gujarat",
+    "description": "Staged financial assistance for daughters in low-income Gujarat families to improve the sex ratio, encourage education and prevent child marriage.",
+    "benefits": "₹1,10,000 in total: ₹4,000 on entering Class 1, ₹6,000 on entering Class 9, and ₹1,00,000 at age 18 for higher education or marriage.",
+    "eligibility_text": "Daughters born on or after 2 August 2019 to families resident in Gujarat with annual income up to ₹2 lakh. Applies to the first two daughters (a January 2025 government statement mentioned daughters born as the first, second or third child). Mother must have been at least 18 at the time of birth.",
+    "exclusions_text": "",
+    "criteria": {
+      "states": ["Gujarat"],
+      "max_family_income": 200000,
+      "child": {"gender": "female", "max_age": 7}
+    },
+    "fuzzy_conditions": ["Daughter is one of the first two (or three) children eligible under current rules", "Mother was 18+ at the daughter's birth"],
+    "documents_required": ["Daughter's birth certificate", "Parents' Aadhaar", "Income certificate", "Bank account details", "Ration card", "Self-declaration"],
+    "application_steps": [
+      "Collect the form from the Anganwadi centre, gram panchayat or CDPO office, or apply on Digital Gujarat.",
+      "Submit within one year of the daughter's birth with the required documents.",
+      "Instalments are paid by DBT at each milestone."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/schemesall/state-specific-schemes/welfare-schemes-of-gujarat/vahli-dikri-yojana?lgn=en",
+      "https://english.udayanews.com/?p=21450"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "max_age 7 approximates 'born on or after 2 Aug 2019' as of late 2026; replace with a birth-date check if you add dates to the profile."
+  },
+  {
+    "scheme_id": "gj_kunvarbai_mameru",
+    "name": "Kunvarbai nu Mameru Yojana (Gujarat marriage assistance)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "women_child",
+    "ministry_or_department": "Social Justice & Empowerment Department / Tribal Development Department, Government of Gujarat",
+    "description": "One-time marriage assistance for daughters from SC, ST, SEBC/OBC and EBC families in Gujarat.",
+    "benefits": "₹12,000 per bride (marriages after 1 April 2021), paid to the bride's bank account; up to two daughters per family.",
+    "eligibility_text": "Brides from SC, ST, SEBC/OBC or EBC families resident in Gujarat with annual family income up to ₹6 lakh. Bride must be at least 18 and groom at least 21 at marriage; apply within two years of marriage.",
+    "exclusions_text": "Not available for more than two daughters in a family.",
+    "criteria": {
+      "states": ["Gujarat"],
+      "genders": ["female"],
+      "min_age": 18,
+      "marital_status": ["married"],
+      "social_categories": ["sc", "st", "obc"],
+      "max_family_income": 600000
+    },
+    "fuzzy_conditions": ["Married within the last two years and marriage is registered", "Groom was at least 21 at marriage", "Not more than two daughters of the family have already claimed it"],
+    "documents_required": ["Bride's Aadhaar", "Caste certificate", "Income certificate", "Marriage registration certificate", "Bride's bank passbook", "Joint photograph", "Self-declaration"],
+    "application_steps": [
+      "Apply on the e-Samaj Kalyan portal (SC/OBC/EBC) or Tribal Development portal (ST).",
+      "Upload marriage and caste documents within two years of marriage.",
+      "Assistance is credited to the bride's account."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.publicservicesmap.in/schemes/kunwar-bai-nu-mameru-yojana-sebc-%26-ebc--kbnmy-sebcebc?lang=en",
+      "https://www.publicservicesmap.in/schemes/kuvarbai-nu-mammeru-scheme-(sc)--gj-2531"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "EBC (economically backward, unreserved) brides are also covered; map 'ews' to this scheme manually if needed."
+  },
+  {
+    "scheme_id": "pmjay",
+    "name": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (AB PM-JAY)",
+    "level": "central",
+    "state": null,
+    "category": "health",
+    "ministry_or_department": "Ministry of Health & Family Welfare (National Health Authority)",
+    "description": "Cashless hospitalisation cover for poor and vulnerable families at empanelled public and private hospitals.",
+    "benefits": "Health cover of ₹5 lakh per family per year for secondary and tertiary hospitalisation; no cap on family size or age; pre-existing conditions covered.",
+    "eligibility_text": "Families identified as deprived under SECC 2011 (rural deprivation criteria and urban occupational categories), plus families added by states from their own lists (often NFSA ration card holders). Seniors 70+ are covered separately under Ayushman Vay Vandana.",
+    "exclusions_text": "",
+    "criteria": {
+      "requires_list_lookup": "PM-JAY beneficiary list (beneficiary.nha.gov.in)"
+    },
+    "fuzzy_conditions": ["Family appears in the SECC 2011 / state-expanded beneficiary list (check on beneficiary.nha.gov.in or the Ayushman app)"],
+    "documents_required": ["Aadhaar", "Ration card / family ID", "Mobile number"],
+    "application_steps": [
+      "Check eligibility on beneficiary.nha.gov.in or the Ayushman app using mobile or Aadhaar.",
+      "Complete Aadhaar e-KYC and download the Ayushman card (or visit a CSC/empanelled hospital Arogya Mitra).",
+      "Show the card at an empanelled hospital for cashless treatment."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://cleartax.in/s/ayushman-card",
+      "https://www.indianpaycalculator.in/government-schemes/ayushman-bharat-pmjay"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Eligibility depends on a list lookup, so the system should usually return needs_info and point the user to the eligibility checker. In Gujarat, see PMJAY-MA."
+  },
+  {
+    "scheme_id": "ab_vay_vandana",
+    "name": "Ayushman Vay Vandana Card (PM-JAY for seniors 70+)",
+    "level": "central",
+    "state": null,
+    "category": "health",
+    "ministry_or_department": "Ministry of Health & Family Welfare (National Health Authority)",
+    "description": "Extension of AB PM-JAY (launched 29 October 2024) covering every citizen aged 70 and above regardless of income.",
+    "benefits": "₹5 lakh per year of cashless hospital cover; if the family is already covered under PM-JAY, an additional ₹5 lakh top-up just for the 70+ member(s).",
+    "eligibility_text": "All Indian citizens aged 70 years or above, irrespective of income or economic status. Holders of private insurance are also eligible.",
+    "exclusions_text": "Beneficiaries of CGHS, ECHS or Ayushman CAPF must choose either their existing scheme or Vay Vandana.",
+    "criteria": {
+      "min_age": 70
+    },
+    "fuzzy_conditions": ["If covered by CGHS/ECHS/CAPF, willing to switch to Vay Vandana"],
+    "documents_required": ["Aadhaar (age verified from Aadhaar)", "Mobile number"],
+    "application_steps": [
+      "Self-register on the Ayushman app or beneficiary.nha.gov.in, or visit a CSC / empanelled hospital.",
+      "Complete Aadhaar e-KYC.",
+      "Download the Ayushman Vay Vandana card and use it for cashless treatment."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.businesstoday.in/amp/personal-finance/insurance/story/ayushman-bharat-vaya-vandana-full-state-wise-list-of-hospitals-entitled-to-serve-senior-citizens-for-ab-pm-jay-health-cover-452884-2024-11-07",
+      "https://cleartax.in/s/ayushman-card"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "gj_pmjay_ma",
+    "name": "AB PMJAY - Mukhyamantri Amrutam (PMJAY-MA, Gujarat)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "health",
+    "ministry_or_department": "Health & Family Welfare Department, Government of Gujarat",
+    "description": "Gujarat's integrated health insurance combining AB PM-JAY with the state's Mukhyamantri Amrutam (MA) and MA Vatsalya schemes.",
+    "benefits": "Cashless treatment up to ₹10 lakh per family per year at empanelled hospitals (raised from ₹5 lakh in July 2023), including transplants and cochlear implants.",
+    "eligibility_text": "Gujarat residents in PM-JAY lists, BPL families, families with annual income up to ₹4 lakh, senior citizens from families with income up to ₹6 lakh, and specific groups such as ASHA workers, accredited journalists, U-WIN card holders and some fixed-pay state employees.",
+    "exclusions_text": "",
+    "criteria": {
+      "states": ["Gujarat"],
+      "any_of": [
+        {"max_family_income": 400000},
+        {"requires_bpl": true},
+        {"min_age": 60, "max_family_income": 600000}
+      ]
+    },
+    "fuzzy_conditions": [],
+    "documents_required": ["Aadhaar", "Ration card", "Income certificate", "Residence proof", "Photographs"],
+    "application_steps": [
+      "Visit a taluka/civic centre, MA kiosk or empanelled hospital Arogya Mitra (or check on the Ayushman app).",
+      "Submit Aadhaar, ration card and income certificate for verification.",
+      "Receive the PMJAY-MA (Ayushman) card and use it for cashless treatment."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://theprint.in/india/gujarat-govt-launches-revamped-pmjay-ma-scheme-with-rs-10-lakh-health-cover/1664508",
+      "https://joinditto.in/articles/health-insurance/what-is-mukhyamantri-amrutum-ma-yojana/"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Income limits come from secondary sources; confirm on the state health portal."
+  },
+  {
+    "scheme_id": "nikshay_poshan",
+    "name": "Ni-kshay Poshan Yojana (nutrition support for TB patients)",
+    "level": "central",
+    "state": null,
+    "category": "health",
+    "ministry_or_department": "Ministry of Health & Family Welfare (National TB Elimination Programme)",
+    "description": "Direct cash support for nutrition to every notified TB patient for the duration of treatment.",
+    "benefits": "₹1,000 per month for the full duration of anti-TB treatment (raised from ₹500 in late 2024), typically ₹3,000-₹6,000 in total.",
+    "eligibility_text": "All TB patients notified on the Ni-kshay portal and on treatment, in public or private sector.",
+    "exclusions_text": "",
+    "criteria": {
+      "health_conditions": ["tuberculosis"]
+    },
+    "fuzzy_conditions": ["Notified on the Ni-kshay portal by the treating facility"],
+    "documents_required": ["Ni-kshay ID (given at TB notification)", "Aadhaar", "Bank account details"],
+    "application_steps": [
+      "Ensure your doctor/facility notifies the TB case on the Ni-kshay portal.",
+      "Give your bank details to the TB health visitor / facility.",
+      "Payments are credited monthly by DBT during treatment."
+    ],
+    "application_mode": "offline",
+    "source_urls": [
+      "https://mohfw.gov.in/press-info/7783",
+      "https://vajiramias.com/current-affairs/what-is-ni-kshay-poshan-yojana-npy/67050f6f7b914b06013352f5"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pm_vishwakarma",
+    "name": "PM Vishwakarma",
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "ministry_or_department": "Ministry of Micro, Small & Medium Enterprises",
+    "description": "End-to-end support for traditional artisans and craftspeople in 18 trades: recognition, skilling, toolkits, credit and marketing.",
+    "benefits": "PM Vishwakarma certificate and ID; skill training with ₹500/day stipend; ₹15,000 toolkit incentive; collateral-free loans up to ₹3 lakh (₹1 lakh then ₹2 lakh) at 5% concessional interest; digital transaction and marketing support.",
+    "eligibility_text": "Artisans and craftspeople working with hands and tools in one of 18 family-based trades, self-employed in the unorganised sector, aged 18 or above on the date of registration.",
+    "exclusions_text": "Not eligible if a loan was taken under PMEGP, PM SVANidhi or Mudra in the past 5 years (unless fully repaid). Only one member per family (husband, wife, unmarried children). Government employees and their families are excluded.",
+    "criteria": {
+      "min_age": 18,
+      "occupations": ["artisan"],
+      "artisan_trades": ["carpenter", "boat_maker", "armourer", "blacksmith", "hammer_toolkit_maker", "locksmith", "goldsmith", "potter", "sculptor_stone_breaker", "cobbler", "mason", "basket_mat_broom_coir_weaver", "doll_toy_maker", "barber", "garland_maker", "washerman", "tailor", "fishing_net_maker"],
+      "excludes_govt_employee": true
+    },
+    "fuzzy_conditions": [
+      "No outstanding PMEGP / PM SVANidhi / Mudra loan taken in the last 5 years",
+      "No other family member already registered"
+    ],
+    "documents_required": ["Aadhaar", "Mobile number linked to Aadhaar", "Bank details", "Ration card"],
+    "application_steps": [
+      "Register at a Common Service Centre with Aadhaar biometric authentication (pmvishwakarma.gov.in).",
+      "Three-stage verification by Gram Panchayat/ULB, district committee and screening committee.",
+      "Attend basic skill training, then apply for the toolkit voucher and loan."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://myscheme.gov.in/schemes/pmv",
+      "https://nsdcindia.org/pmvishwakarma.html"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pm_svanidhi",
+    "name": "PM Street Vendor's AtmaNirbhar Nidhi (PM SVANidhi, restructured)",
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "ministry_or_department": "Ministry of Housing & Urban Affairs",
+    "description": "Collateral-free working-capital loans for street vendors, restructured in August 2025 and extended to 31 March 2030.",
+    "benefits": "Loans in three tranches: up to ₹15,000, then ₹25,000, then ₹50,000 on timely repayment; 7% interest subsidy; UPI-linked RuPay credit card after repaying the second loan; digital cashback up to ₹1,600.",
+    "eligibility_text": "Street vendors vending in urban local bodies, census towns and peri-urban areas who have a Certificate of Vending, ID card or Letter of Recommendation from the ULB / Town Vending Committee.",
+    "exclusions_text": "",
+    "criteria": {
+      "occupations": ["street_vendor"]
+    },
+    "fuzzy_conditions": ["Vends in an urban, census-town or peri-urban area", "Has (or can get) a Certificate of Vending, ID card or Letter of Recommendation from the ULB"],
+    "documents_required": ["Aadhaar", "Vending certificate / ID / LoR", "Bank account", "Mobile number"],
+    "application_steps": [
+      "Apply on pmsvanidhi.mohua.gov.in, through a CSC, or at a bank branch/ULB camp.",
+      "Get the Letter of Recommendation from the ULB if not surveyed.",
+      "Bank sanctions the first-tranche loan; repay on time to unlock the next tranche."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://www.centralbank.bank.in/hi/node/224507",
+      "https://dce.visionias.in/news-today/2025-08-28/schemes-in-news/cabinet-approves-restructuring-extension-of-pm-svanidhi-scheme"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pmegp",
+    "name": "Prime Minister's Employment Generation Programme (PMEGP)",
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "ministry_or_department": "Ministry of MSME (implemented by KVIC, KVIB and DICs)",
+    "description": "Credit-linked subsidy for setting up new micro enterprises in manufacturing, service or business sectors.",
+    "benefits": "Margin-money subsidy of 15% (urban) / 25% (rural) for general category and 25% (urban) / 35% (rural) for special categories (SC/ST/OBC/minorities/women/ex-servicemen/PwD/transgender, NER, hill and border areas). Maximum project cost ₹50 lakh (manufacturing) and ₹20 lakh (service/business). Own contribution 10% (general) or 5% (special).",
+    "eligibility_text": "Individuals above 18 years setting up new projects; Class 8 pass required for projects above ₹10 lakh (manufacturing) or ₹5 lakh (service/business). No income ceiling. Only one person per family (self and spouse). SHGs, trusts, societies and production co-operatives also eligible.",
+    "exclusions_text": "Only new projects; existing units and those already subsidised under other government schemes are excluded.",
+    "criteria": {
+      "min_age": 18,
+      "required_intents": ["start_business"]
+    },
+    "fuzzy_conditions": ["The project is a new unit", "Class 8 pass if project cost exceeds ₹10 lakh (manufacturing) or ₹5 lakh (service)"],
+    "documents_required": ["Aadhaar", "Project report", "Caste/special category certificate if applicable", "Educational certificate", "Rural area certificate if applicable", "EDP training certificate"],
+    "application_steps": [
+      "Apply online on the KVIC PMEGP e-portal with a project report.",
+      "District task force committee interviews and recommends to banks.",
+      "Bank sanctions the loan; complete EDP training; subsidy is released into a lock-in account."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://sbi.bank.in/web/get-business-product-information/prime-ministers-employment-generation-program-pmegp-",
+      "https://ganjam.odisha.gov.in/sites/default/files/2026-01/Prime%20Ministers%20Employment%20Generation%20Program%20%28PMEGP%29.pdf"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Only recommend when the user wants to start a new enterprise."
+  },
+  {
+    "scheme_id": "pmmy_mudra",
+    "name": "Pradhan Mantri MUDRA Yojana (PMMY)",
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "ministry_or_department": "Ministry of Finance (MUDRA Ltd.)",
+    "description": "Collateral-free loans for non-corporate, non-farm micro and small enterprises in manufacturing, trading, services and allied agricultural activities.",
+    "benefits": "Shishu up to ₹50,000; Kishor ₹50,001-₹5 lakh; Tarun ₹5-10 lakh; Tarun Plus ₹10-20 lakh for borrowers who repaid a Tarun loan (from 24 Oct 2024).",
+    "eligibility_text": "Individuals, proprietorships and partnerships running or starting an income-generating non-farm micro enterprise with a credit need up to ₹20 lakh.",
+    "exclusions_text": "Pure crop cultivation is not covered (use KCC). Tarun Plus is not for first-time borrowers.",
+    "criteria": {
+      "min_age": 18,
+      "required_intents": ["start_business", "expand_business"]
+    },
+    "fuzzy_conditions": ["The business is a non-farm income-generating micro enterprise", "Not a defaulter with any bank"],
+    "documents_required": ["ID and address proof", "Business plan / quotation", "Bank statements", "Caste certificate if applicable", "For Kishor/Tarun: ITR, financial statements"],
+    "application_steps": [
+      "Apply on the JanSamarth portal (Business Activity Loan → MUDRA) or at any bank/NBFC/MFI branch.",
+      "Choose the category based on the amount needed.",
+      "Lender appraises and disburses the loan."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://sbi.co.in/web/agri-rural/pradhan-mantri-mudra-yojna",
+      "https://www.businesstoday.in/personal-finance/investment/story/diwali-cheer-loan-limit-under-pradhan-mantri-mudra-yojana-hiked-to-rs-20-lakh-check-eligibility-other-details-451522-2024-10-25"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "stand_up_india",
+    "name": "Stand-Up India",
+    "level": "central",
+    "state": null,
+    "category": "livelihood",
+    "ministry_or_department": "Ministry of Finance (Department of Financial Services)",
+    "description": "Bank loans between ₹10 lakh and ₹1 crore for SC/ST and women entrepreneurs setting up a first-time (greenfield) enterprise.",
+    "benefits": "Composite loan (term loan + working capital) of ₹10 lakh to ₹1 crore covering up to 85% of project cost; repayable in 7 years with up to 18 months moratorium; credit guarantee cover.",
+    "eligibility_text": "SC, ST and/or women entrepreneurs above 18 years setting up a greenfield enterprise in manufacturing, services, trading or agri-allied activities. For non-individual enterprises, at least 51% stake must be held by SC/ST and/or women.",
+    "exclusions_text": "Borrowers in default with any bank are not eligible. Only first-time ventures.",
+    "criteria": {
+      "min_age": 18,
+      "required_intents": ["start_business"],
+      "any_of": [
+        {"genders": ["female"]},
+        {"social_categories": ["sc", "st"]}
+      ]
+    },
+    "fuzzy_conditions": ["First-time (greenfield) venture", "Needs a loan of ₹10 lakh or more", "Not in default with any bank"],
+    "documents_required": ["ID and address proof", "Caste certificate (SC/ST)", "Project report", "Business address proof", "Partnership deed / incorporation documents if not individual"],
+    "application_steps": [
+      "Apply on standupmitra.in / udyamimitra.in or at a scheduled commercial bank branch.",
+      "Answer the eligibility questionnaire (trainee or ready borrower).",
+      "Bank appraises the project and sanctions the loan."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://en.vikaspedia.in/viewcontent/social-welfare/scheduled-caste-welfare-1/stand-up-india-scheme",
+      "https://sbi.co.in/web/get-business-product-information/stand-up-india"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "SBI's page says the scheme was extended up to FY2025. Confirm it is still accepting applications before recommending."
+  },
+  {
+    "scheme_id": "gj_manav_kalyan",
+    "name": "Manav Kalyan Yojana (Gujarat toolkit assistance)",
+    "level": "state",
+    "state": "Gujarat",
+    "category": "livelihood",
+    "ministry_or_department": "Commissioner of Cottage & Rural Industries, Industries & Mines Department, Government of Gujarat",
+    "description": "Toolkit assistance (as e-vouchers) for economically weaker people in Gujarat to start self-employment in designated trades.",
+    "benefits": "Trade-specific toolkit worth several thousand rupees via e-voucher redeemable at approved dealers; one-time benefit.",
+    "eligibility_text": "Residents of Gujarat aged 18 to 60 who want to start self-employment in one of the designated trades (e.g. masonry, tailoring, plumbing, beauty parlour, dairy, mobile repair). Current myScheme listing gives a family income limit of ₹6 lakh; older guidelines used ₹1.2 lakh (rural) / ₹1.5 lakh (urban).",
+    "exclusions_text": "One-time benefit per person.",
+    "criteria": {
+      "states": ["Gujarat"],
+      "min_age": 18,
+      "max_age": 60,
+      "max_family_income": 600000,
+      "required_intents": ["start_business", "expand_business"]
+    },
+    "fuzzy_conditions": ["Wants to work in one of the designated trades", "Has not received a toolkit under this scheme before"],
+    "documents_required": ["Aadhaar", "Income certificate or BPL score (rural)", "Caste certificate if applicable", "Experience proof for the trade", "Notarised affidavit"],
+    "application_steps": [
+      "Apply on the e-Kutir portal (e-kutir.gujarat.gov.in) when applications open.",
+      "Upload documents and choose the trade.",
+      "After approval, redeem the e-voucher at an approved dealer."
+    ],
+    "application_mode": "online",
+    "source_urls": [
+      "https://www.publicservicesmap.in/schemes/manav-kalyan-yojana--mky-gujarat",
+      "https://www.egovtschemes.com/?p=26484"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": "Sources conflict on age (16 vs 18) and income limit; the myScheme-mirrored values are used."
+  },
+  {
+    "scheme_id": "pmay_u",
+    "name": "Pradhan Mantri Awas Yojana - Urban 2.0 (PMAY-U 2.0)",
+    "level": "central",
+    "state": null,
+    "category": "housing",
+    "ministry_or_department": "Ministry of Housing & Urban Affairs",
+    "description": "Housing support for urban EWS, LIG and MIG families without a pucca house, through construction assistance, affordable housing partnerships, rental housing, and an interest subsidy on home loans.",
+    "benefits": "Central assistance for beneficiary-led construction or affordable housing (EWS), or Interest Subsidy Scheme: 4% subsidy on the first ₹8 lakh of home loans up to ₹25 lakh for houses up to ₹35 lakh.",
+    "eligibility_text": "Urban families in EWS (income up to ₹3 lakh), LIG (₹3-6 lakh) or MIG (₹6-9 lakh) categories who do not own a pucca house anywhere in India in their own or any family member's name.",
+    "exclusions_text": "Families who have availed a central/state housing scheme in the last 20 years are excluded.",
+    "criteria": {
+      "area": "urban",
+      "max_family_income": 900000,
+      "requires_no_pucca_house": true
+    },
+    "fuzzy_conditions": ["Has not received a house under any government housing scheme in the last 20 years"],
+    "documents_required": ["Aadhaar of all family members", "Income self-certificate/affidavit", "Undertaking of not owning a pucca house", "Bank details", "Land documents (for self-construction)"],
+    "application_steps": [
+      "Apply on the Unified Web Portal (pmaymis.gov.in) or through the urban local body.",
+      "Choose the vertical: BLC, AHP, ARH, or Interest Subsidy (via a bank home loan).",
+      "ULB/lender verifies eligibility and releases assistance in instalments."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/aug/doc2024810372701.pdf",
+      "https://pmaymis.gov.in/PMAYMIS2_2024/PmayDefault.aspx"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  },
+  {
+    "scheme_id": "pmay_g",
+    "name": "Pradhan Mantri Awas Yojana - Gramin (PMAY-G)",
+    "level": "central",
+    "state": null,
+    "category": "housing",
+    "ministry_or_department": "Ministry of Rural Development",
+    "description": "Financial assistance for rural households without a house or living in kutcha/dilapidated houses to build a pucca house with basic amenities.",
+    "benefits": "₹1.20 lakh (plains) / ₹1.30 lakh (hilly areas) for a house of at least 25 sq m, plus convergence support for toilet, MGNREGA labour days, electricity, water and LPG.",
+    "eligibility_text": "Rural households that are houseless or live in zero-, one- or two-room houses with kutcha walls and kutcha roof, identified from SECC 2011 / Awaas+ survey, subject to the revised exclusion criteria (10 parameters, 2024).",
+    "exclusions_text": "Excluded if the household has a motorised three/four-wheeler, mechanised farm equipment, a KCC limit of ₹50,000 or more, a government employee, an income-tax or professional-tax payer, any member earning above ₹15,000 per month, a registered non-agricultural enterprise, or land above set limits.",
+    "criteria": {
+      "area": "rural",
+      "requires_no_pucca_house": true,
+      "max_monthly_income": 15000,
+      "excludes_govt_employee": true,
+      "excludes_income_tax_payer": true
+    },
+    "fuzzy_conditions": [
+      "Houseless or living in a kutcha house of at most two rooms",
+      "No motorised three/four-wheeler or mechanised farm equipment, and KCC limit below ₹50,000"
+    ],
+    "documents_required": ["Aadhaar", "Job card (MGNREGA)", "Bank account", "Swachh Bharat Mission number (if any)", "Consent for Aadhaar use"],
+    "application_steps": [
+      "Get surveyed through the Awaas+ 2024 app (self-survey with face authentication or via the gram panchayat surveyor).",
+      "Gram Sabha validates the priority list.",
+      "Assistance is released in instalments by DBT as construction progresses (geo-tagged photos)."
+    ],
+    "application_mode": "online_or_offline",
+    "source_urls": [
+      "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc20241119437801.pdf",
+      "https://www.publicservicesmap.in/schemes/pradhan-mantri-awaas-yojana-gramin--pmay-g"
+    ],
+    "last_verified": "2026-11-07",
+    "notes": ""
+  }
+]

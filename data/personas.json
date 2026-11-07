@@ -1,0 +1,243 @@
+[
+  {
+    "persona_id": "P01",
+    "text": "I'm Ramesh Patel, 45 years old, a farmer from a village near Anand, Gujarat. I own about 2 acres of land and our family earns around ₹1.2 lakh a year. We are OBC. What government help can I get?",
+    "expected_profile": {"age": 45, "gender": "male", "state": "Gujarat", "area": "rural", "occupation": "farmer", "owns_agricultural_land": true, "land_hectares": 0.81, "annual_family_income": 120000, "social_category": "obc"},
+    "expected_eligible": ["pm_kisan", "kcc", "e_shram", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmfby", "pmjay"],
+    "notes": "Too old for PM-KMY (18-40) and APY. No crop damage mentioned, so not Kisan Sahay."
+  },
+  {
+    "persona_id": "P02",
+    "text": "My mother Savitaben is 62. My father passed away three years ago. She lives in our village in Banaskantha district and we have a BPL card. Family income is only about ₹60,000 a year. Is there any pension for her?",
+    "expected_profile": {"age": 62, "gender": "female", "state": "Gujarat", "area": "rural", "marital_status": "widowed", "is_bpl": true, "annual_family_income": 60000},
+    "expected_eligible": ["ignoaps", "gj_ganga_swaroopa", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["ignwps", "gj_old_age_pension", "pmjay"],
+    "notes": "Subject is the mother, not the writer. Overlapping NSAP pensions are acceptable either way; BPL elders go to IGNOAPS rather than the state Niradhar pension."
+  },
+  {
+    "persona_id": "P03",
+    "text": "I am Priya, 15 years old, studying in class 10 at a private school in Ahmedabad. My father drives an auto-rickshaw and our family income is about ₹3.5 lakh per year. We are general category. Can I get any scholarship?",
+    "expected_profile": {"age": 15, "gender": "female", "state": "Gujarat", "area": "urban", "occupation": "student", "education_level": "class_9_10", "annual_family_income": 350000, "social_category": "general"},
+    "expected_eligible": ["gj_namo_lakshmi", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "NMMSS is only for Class 8 students in government schools."
+  },
+  {
+    "persona_id": "P04",
+    "text": "I passed 12th science from GSEB with 91 percentile and got admission in B.E. Computer Engineering at L.D. College of Engineering, Ahmedabad. I am 18, SC category, and my family income is ₹4 lakh a year. Can I get a scholarship or an education loan?",
+    "expected_profile": {"age": 18, "state": "Gujarat", "occupation": "student", "education_level": "ug", "stream": "science", "last_exam_percentile": 91, "annual_family_income": 400000, "social_category": "sc", "intents": ["education_loan"]},
+    "expected_eligible": ["gj_mysy", "pmsby", "pmjjby", "apy", "gj_pmjay_ma"],
+    "acceptable": ["pm_usp_csss", "pm_vidyalaxmi", "pmjay"],
+    "notes": "Income ₹4 lakh is above the ₹2.5 lakh SC post-matric limit. CSSS conflicts with other scholarships; Vidyalaxmi depends on the QHEI list. Gender is not stated in the text; extractor should leave it null."
+  },
+  {
+    "persona_id": "P05",
+    "text": "Main Kamlesh hoon, 32 saal ka, Surat mein construction site par kaam karta hoon. Mahine ka ₹12,000 milta hai, PF-ESIC kuch nahi hai. Ghar ki total income saal ki 1.8 lakh hai. Hum kiraye ke kamre mein rehte hain, apna koi ghar nahi hai. SC category.",
+    "expected_profile": {"age": 32, "gender": "male", "state": "Gujarat", "area": "urban", "occupation": "construction_worker", "monthly_income": 12000, "annual_family_income": 180000, "has_epfo_esic_nps": false, "owns_pucca_house": false, "social_category": "sc"},
+    "expected_eligible": ["pm_sym", "e_shram", "apy", "pmjjby", "pmsby", "pmay_u", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Hinglish input."
+  },
+  {
+    "persona_id": "P06",
+    "text": "I'm Meena, 26, from a village in Sabarkantha. I'm 5 months pregnant with my first baby and I plan to deliver at the government hospital. We are SC and have a BPL card. My husband works as a farm labourer; we earn about ₹90,000 a year. We live in a two-room kutcha house and still cook on a chulha, no gas connection.",
+    "expected_profile": {"age": 26, "gender": "female", "state": "Gujarat", "area": "rural", "occupation": "homemaker", "is_pregnant_or_lactating": true, "social_category": "sc", "is_bpl": true, "annual_family_income": 90000, "owns_pucca_house": false, "has_lpg_connection": false, "marital_status": "married"},
+    "expected_eligible": ["pmmvy", "jsy", "pmuy", "apy", "pmjjby", "pmsby", "gj_pmjay_ma", "pmay_g"],
+    "acceptable": ["pmjay", "gj_kunvarbai_mameru"],
+    "notes": "Kunvarbai Mameru depends on whether she married within the last two years (not stated)."
+  },
+  {
+    "persona_id": "P07",
+    "text": "I am Raju, 38, I sell vegetables on a handcart in Ahmedabad and I have the vending certificate from AMC. I earn around ₹10,000 a month; family income is about ₹1.5 lakh a year. OBC. I want a loan to expand my business.",
+    "expected_profile": {"age": 38, "gender": "male", "state": "Gujarat", "area": "urban", "occupation": "street_vendor", "monthly_income": 10000, "annual_family_income": 150000, "social_category": "obc", "intents": ["expand_business"]},
+    "expected_eligible": ["pm_svanidhi", "pmmy_mudra", "pm_sym", "e_shram", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["gj_manav_kalyan", "pmjay"],
+    "notes": "Manav Kalyan depends on whether vegetable vending is in the current trade list."
+  },
+  {
+    "persona_id": "P08",
+    "text": "Hu Bhikhabhai, 50 varas no chhu, Kutch na gaam ma kumbhar (potter) nu kaam karu chhu. Varshik aavak 1 lakh jetli chhe. OBC. Mare navi tools ane dhandho vadharva loan joie chhe.",
+    "expected_profile": {"age": 50, "gender": "male", "state": "Gujarat", "area": "rural", "occupation": "artisan", "artisan_trade": "potter", "annual_family_income": 100000, "social_category": "obc", "intents": ["expand_business"]},
+    "expected_eligible": ["pm_vishwakarma", "e_shram", "pmjjby", "pmsby", "pmmy_mudra", "gj_pmjay_ma"],
+    "acceptable": ["gj_manav_kalyan", "pmjay"],
+    "notes": "Gujarati written in Latin script. Too old for APY / PM-SYM."
+  },
+  {
+    "persona_id": "P09",
+    "text": "I'm 71, a retired state government clerk living in Vadodara. My pension is ₹35,000 a month and I file income tax. Total family income is about ₹6 lakh. What health or other benefits can I get at this age?",
+    "expected_profile": {"age": 71, "gender": "male", "state": "Gujarat", "area": "urban", "occupation": "retired", "annual_family_income": 600000, "is_income_tax_payer": true, "is_bpl": false},
+    "expected_eligible": ["ab_vay_vandana", "gj_pmjay_ma"],
+    "acceptable": [],
+    "notes": "PMJAY-MA via the senior-citizen route (family income up to ₹6 lakh). Too old for PMSBY (18-70)."
+  },
+  {
+    "persona_id": "P10",
+    "text": "मैं सुनीता हूँ, 34 साल की, बिहार के गया जिले के एक गाँव से। मैं पहली बार गर्भवती हूँ, सरकारी अस्पताल में डिलीवरी कराऊँगी। हम सामान्य वर्ग से हैं, परिवार की सालाना आय लगभग 2 लाख है। घर में गैस कनेक्शन पहले से है।",
+    "expected_profile": {"age": 34, "gender": "female", "state": "Bihar", "area": "rural", "is_pregnant_or_lactating": true, "social_category": "general", "annual_family_income": 200000, "has_lpg_connection": true},
+    "expected_eligible": ["jsy", "pmmvy", "apy", "pmjjby", "pmsby"],
+    "acceptable": ["pmjay"],
+    "notes": "Hindi input. Bihar is a JSY Low Performing State, so caste/BPL is not required. Already has LPG, so not Ujjwala. No Gujarat schemes."
+  },
+  {
+    "persona_id": "P11",
+    "text": "I'm Vikram, 28, a farmer near Rajkot. I own 1.5 hectares. Unseasonal rain this kharif destroyed about half my groundnut crop. Family income is about ₹1.5 lakh a year, general category.",
+    "expected_profile": {"age": 28, "gender": "male", "state": "Gujarat", "area": "rural", "occupation": "farmer", "owns_agricultural_land": true, "land_hectares": 1.5, "annual_family_income": 150000, "social_category": "general"},
+    "expected_eligible": ["pm_kisan", "pm_kmy", "kcc", "gj_kisan_sahay", "apy", "e_shram", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmfby", "pm_sym", "pmjay"],
+    "notes": "Crop loss ~50% (≥33%) triggers Kisan Sahay. PM-SYM is acceptable but small farmers normally use PM-KMY."
+  },
+  {
+    "persona_id": "P12",
+    "text": "I'm Hetal, 35, a widow living in Rajkot city. I work as a domestic helper in houses. Our family income is about ₹1.2 lakh a year. I have a daughter aged 6 and a son aged 9. We are OBC. I have not remarried.",
+    "expected_profile": {"age": 35, "gender": "female", "state": "Gujarat", "area": "urban", "occupation": "domestic_worker", "marital_status": "widowed", "annual_family_income": 120000, "social_category": "obc", "children": [{"age": 6, "gender": "female"}, {"age": 9, "gender": "male"}]},
+    "expected_eligible": ["gj_ganga_swaroopa", "ssy", "gj_vahali_dikri", "pm_sym", "e_shram", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Too young for IGNWPS (40-79). Daughter aged 6 was born after Aug 2019 and is one of the first two children."
+  },
+  {
+    "persona_id": "P13",
+    "text": "My son Mehul is 12 years old and has 75% locomotor disability. We live in a village in Dahod district, Gujarat. We are ST and on the BPL list. He studies in class 7.",
+    "expected_profile": {"age": 12, "gender": "male", "state": "Gujarat", "area": "rural", "disability_percent": 75, "social_category": "st", "is_bpl": true, "occupation": "student", "education_level": "class_1_7"},
+    "expected_eligible": ["gj_sant_surdas", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Subject is the child. 75% qualifies under the 60% threshold effective FY 2025-26."
+  },
+  {
+    "persona_id": "P14",
+    "text": "I am Farida, 45, from Ahmedabad. I have 85% visual disability and our family is on the BPL list. I am not married.",
+    "expected_profile": {"age": 45, "gender": "female", "state": "Gujarat", "area": "urban", "disability_percent": 85, "is_bpl": true, "marital_status": "single"},
+    "expected_eligible": ["igndps", "gj_pmjay_ma", "pmjjby", "pmsby"],
+    "acceptable": ["pmjay", "pmuy"],
+    "notes": "Ujjwala depends on LPG status and household poverty, both unknown."
+  },
+  {
+    "persona_id": "P15",
+    "text": "I'm Suresh, 40, a truck driver from Bharuch. I was diagnosed with TB two months ago and I'm on treatment at the government hospital. I earn about ₹14,000 a month, no PF. Family income is ₹2.4 lakh a year.",
+    "expected_profile": {"age": 40, "gender": "male", "state": "Gujarat", "occupation": "driver", "health_conditions": ["tuberculosis"], "monthly_income": 14000, "has_epfo_esic_nps": false, "annual_family_income": 240000},
+    "expected_eligible": ["nikshay_poshan", "pm_sym", "e_shram", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Rural/urban not stated; no scheme in his list depends on it."
+  },
+  {
+    "persona_id": "P16",
+    "text": "I'm Neha, 29, from Ahmedabad. I have an MBA and I'm not working right now. I want to start a small food processing unit; project cost is around ₹25 lakh. Family income is about ₹9 lakh. General category.",
+    "expected_profile": {"age": 29, "gender": "female", "state": "Gujarat", "area": "urban", "occupation": "unemployed", "annual_family_income": 900000, "social_category": "general", "intents": ["start_business"]},
+    "expected_eligible": ["pmegp", "apy", "pmjjby", "pmsby"],
+    "acceptable": ["stand_up_india", "pmmy_mudra", "pmjay"],
+    "notes": "Stand-Up India fits on paper but its continuation needs checking; Mudra caps at ₹20 lakh. Income too high for Manav Kalyan and PMJAY-MA."
+  },
+  {
+    "persona_id": "P17",
+    "text": "My son Rohan is 13 and studies in class 8 at the government school in our village near Bhavnagar. He got 78% in class 7. Family income is ₹1.5 lakh. We are OBC.",
+    "expected_profile": {"age": 13, "gender": "male", "state": "Gujarat", "area": "rural", "occupation": "student", "education_level": "class_8", "last_exam_percent": 78, "annual_family_income": 150000, "social_category": "obc"},
+    "expected_eligible": ["nmmss", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Eligible to apply for the NMMS test."
+  },
+  {
+    "persona_id": "P18",
+    "text": "I'm Kavya, 16, from a village near Mehsana. I scored 72% in class 10 and took science in class 11 at the government school. We are SC and family income is ₹2.5 lakh a year.",
+    "expected_profile": {"age": 16, "gender": "female", "state": "Gujarat", "area": "rural", "occupation": "student", "education_level": "class_11_12", "stream": "science", "last_exam_percent": 72, "annual_family_income": 250000, "social_category": "sc"},
+    "expected_eligible": ["gj_namo_lakshmi", "gj_namo_saraswati", "pms_sc", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": ""
+  },
+  {
+    "persona_id": "P19",
+    "text": "I'm Pooja, 22, from Junagadh. I got married three months ago and our marriage is registered; my husband is 25. My parents' family is SEBC (OBC) with income about ₹3 lakh a year. Is there any help for newly married girls?",
+    "expected_profile": {"age": 22, "gender": "female", "state": "Gujarat", "marital_status": "married", "social_category": "obc", "annual_family_income": 300000},
+    "expected_eligible": ["gj_kunvarbai_mameru", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay", "pmuy"],
+    "notes": ""
+  },
+  {
+    "persona_id": "P20",
+    "text": "Lakhabhai, 48, ST, from a village in Narmada district. He works as a farm labourer for about ₹8,000 a month and lives in a one-room kutcha hut. Family income is ₹1.1 lakh. He has an MGNREGA job card.",
+    "expected_profile": {"age": 48, "gender": "male", "state": "Gujarat", "area": "rural", "occupation": "farm_labourer", "monthly_income": 8000, "annual_family_income": 110000, "social_category": "st", "owns_pucca_house": false},
+    "expected_eligible": ["pmay_g", "e_shram", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Written in third person by a helper."
+  },
+  {
+    "persona_id": "P21",
+    "text": "I'm Imran, 31, I work in a private company in Ahmedabad with PF. Family income is about ₹5 lakh. We own our flat. My wife is a homemaker and we have a 2-year-old daughter. Any savings scheme for her?",
+    "expected_profile": {"age": 31, "gender": "male", "state": "Gujarat", "area": "urban", "occupation": "salaried_private", "has_epfo_esic_nps": true, "annual_family_income": 500000, "owns_pucca_house": true, "marital_status": "married", "children": [{"age": 2, "gender": "female"}]},
+    "expected_eligible": ["ssy", "apy", "pmjjby", "pmsby"],
+    "acceptable": [],
+    "notes": "Income above Vahali Dikri (₹2 lakh) and PMJAY-MA (₹4 lakh) limits."
+  },
+  {
+    "persona_id": "P22",
+    "text": "Ramlal ji is 68 and lives in a village in Rajasthan. He owns 1 hectare of farmland and still farms it with his son's help. The family is on the BPL list.",
+    "expected_profile": {"age": 68, "gender": "male", "state": "Rajasthan", "area": "rural", "occupation": "farmer", "owns_agricultural_land": true, "land_hectares": 1.0, "is_bpl": true},
+    "expected_eligible": ["ignoaps", "pm_kisan", "kcc", "pmsby"],
+    "acceptable": ["pmfby", "pmjay"],
+    "notes": "Outside Gujarat: no state schemes."
+  },
+  {
+    "persona_id": "P23",
+    "text": "I'm Jignesh, 30, a fisherman from a coastal village in Valsad. Family income is about ₹1.6 lakh a year, OBC. I want a Kisan Credit Card for my fishing work.",
+    "expected_profile": {"age": 30, "gender": "male", "state": "Gujarat", "area": "rural", "occupation": "fisher", "annual_family_income": 160000, "social_category": "obc"},
+    "expected_eligible": ["kcc", "e_shram", "pm_sym", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": ""
+  },
+  {
+    "persona_id": "P24",
+    "text": "I'm Nikita, 19, OBC, in first year B.Com at Gujarat University, Ahmedabad. I got 85 percentile in 12th commerce. Family income is ₹2 lakh a year.",
+    "expected_profile": {"age": 19, "gender": "female", "state": "Gujarat", "area": "urban", "occupation": "student", "education_level": "ug", "stream": "commerce", "last_exam_percentile": 85, "annual_family_income": 200000, "social_category": "obc"},
+    "expected_eligible": ["pm_yasasvi_pms", "gj_mysy", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pm_usp_csss", "pmjay"],
+    "notes": "CSSS bars students holding other scholarships."
+  },
+  {
+    "persona_id": "P25",
+    "text": "I'm Dr. Anil Shah, 42, a doctor in Surat. I also own 5 acres of farmland in my native village. I pay income tax; family income is about ₹30 lakh. We own our house.",
+    "expected_profile": {"age": 42, "gender": "male", "state": "Gujarat", "area": "urban", "occupation": "other", "owns_agricultural_land": true, "land_hectares": 2.02, "is_income_tax_payer": true, "annual_family_income": 3000000, "owns_pucca_house": true},
+    "expected_eligible": ["pmjjby", "pmsby"],
+    "acceptable": [],
+    "notes": "Negative test: must NOT recommend PM-KISAN (income-tax payer and practising professional) or APY."
+  },
+  {
+    "persona_id": "P26",
+    "text": "I need some help from the government, I am poor.",
+    "expected_profile": {},
+    "expected_eligible": [],
+    "acceptable": [],
+    "expects_clarification": true,
+    "notes": "Too vague: the system should ask for age, state, occupation and income instead of guessing."
+  },
+  {
+    "persona_id": "P27",
+    "text": "Kantaben is 82, a widow, living alone in Bhavnagar city. She is on the BPL list and has almost no income, maybe ₹50,000 a year.",
+    "expected_profile": {"age": 82, "gender": "female", "state": "Gujarat", "area": "urban", "marital_status": "widowed", "is_bpl": true, "annual_family_income": 50000},
+    "expected_eligible": ["ignoaps", "ab_vay_vandana", "gj_pmjay_ma"],
+    "acceptable": ["gj_ganga_swaroopa", "gj_old_age_pension", "pmjay"],
+    "notes": "Over 79, so IGNOAPS (₹500 central share) rather than IGNWPS. Over 70, so not PMSBY."
+  },
+  {
+    "persona_id": "P28",
+    "text": "I'm Natvarlal, 66, from a village in Kheda. We are not on the BPL list but my wife and I have no regular income, about ₹1 lakh a year from odd jobs. Our sons live separately and don't support us.",
+    "expected_profile": {"age": 66, "gender": "male", "state": "Gujarat", "area": "rural", "is_bpl": false, "annual_family_income": 100000, "marital_status": "married"},
+    "expected_eligible": ["gj_old_age_pension", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Not BPL, so IGNOAPS does not apply; the state pension covers non-BPL low-income elders."
+  },
+  {
+    "persona_id": "P29",
+    "text": "I'm Rahul, 35, an IT employee in Pune. Our family income is ₹8.5 lakh and I pay income tax. We live in a rented flat and don't own any house anywhere. Can I get help to buy a home?",
+    "expected_profile": {"age": 35, "gender": "male", "state": "Maharashtra", "area": "urban", "occupation": "salaried_private", "annual_family_income": 850000, "is_income_tax_payer": true, "owns_pucca_house": false},
+    "expected_eligible": ["pmay_u", "pmjjby", "pmsby"],
+    "acceptable": [],
+    "notes": "MIG band (₹6-9 lakh). Income-tax payer, so not APY."
+  },
+  {
+    "persona_id": "P30",
+    "text": "I'm Rekha, 27, SC, from a village in Anand district. I do tailoring at home and want to start my own small tailoring shop with a new machine. Family income is about ₹1.4 lakh a year.",
+    "expected_profile": {"age": 27, "gender": "female", "state": "Gujarat", "area": "rural", "occupation": "artisan", "artisan_trade": "tailor", "social_category": "sc", "annual_family_income": 140000, "intents": ["start_business"]},
+    "expected_eligible": ["pm_vishwakarma", "gj_manav_kalyan", "pmmy_mudra", "pmegp", "pm_sym", "e_shram", "apy", "pmjjby", "pmsby", "gj_pmjay_ma"],
+    "acceptable": ["pmjay"],
+    "notes": "Stand-Up India is a deliberate trap: she is eligible by gender/caste but needs far less than the ₹10 lakh minimum loan."
+  }
+]
